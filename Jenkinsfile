@@ -1,3 +1,8 @@
+pipeline{
+agent any
+
+tools {nodejs "node"}
+
 stage ('Cypress'){
     parallel {
         stage('Cypress 1') {
@@ -37,4 +42,5 @@ stage ('Cypress'){
             }
         }
     }
+}
 }
